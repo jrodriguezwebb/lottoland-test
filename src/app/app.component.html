@@ -1,49 +1,24 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h2>Euro Jackpot Results and winning numbers</h2>
+      <h3 class="margin-top">Euro Jackpot Results and winning numbers</h3>
       <hr/>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <p>Eurojackpot Results for [date]</p>
+      <app-date></app-date>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <span class="dot">9</span>
-      <span class="dot">11</span>
-      <span class="dot">15</span>
-      <span class="dot extra">36</span>
+      <app-dot number="9"></app-dot>
+      <app-dot number="11" extra="true"></app-dot>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <table class="table table-bordered table-margin">
-        <thead>
-          <tr>
-            <th scope="col">Tier</th>
-            <th scope="col">Match</th>
-            <th scope="col">Winners</th>
-            <th scope="col">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-        </tbody>
-      </table>
+      <app-results></app-results>
     </div>
   </div>
 </div>
