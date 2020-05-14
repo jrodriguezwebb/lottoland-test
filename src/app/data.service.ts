@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class DataService {
 
-  private baseURL = 'http://www.lottoland.com/api/drawings';
+  private baseURL = 'https://www.lottoland.com/api/drawings';
   constructor(public http: HttpClient) { }
 
   public getData() {
