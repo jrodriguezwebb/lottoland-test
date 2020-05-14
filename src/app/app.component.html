@@ -7,18 +7,19 @@
   </div>
   <div class="row">
     <div class="col">
-      <app-date date="01-02-1988"></app-date>
+      <app-date [date]="model?.date"></app-date>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <app-dot number="9"></app-dot>
-      <app-dot number="11" extra="true"></app-dot>
+      <ng-container *ngFor="let dot of model?.numbers">
+        <app-dot [number]="dot.number" [extra]="dot.extra" ></app-dot>
+      </ng-container>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <app-results></app-results>
+      <app-results [data]="model?.odds" ></app-results>
     </div>
   </div>
 </div>

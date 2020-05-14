@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IRank } from '../data.interfaces';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
+  @Input() public data: IRank[];
   constructor() { }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
 }
