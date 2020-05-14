@@ -21,8 +21,14 @@ export class DataService {
     let odds: IRank[] = [];
 
     for (const [key, value] of Object.entries(response.last.odds)) {
-      odds = [...odds, value];
+      if (value.winners > 0) {
+        odds = [...odds, value];
+      }
     }
+
+    odds.sort((a, b) => {
+      return b.prize - a.prize;
+    });
 
     const numbers: IDot[] = response.last.numbers.map((value: number): IDot => {
       return {

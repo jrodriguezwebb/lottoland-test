@@ -2,23 +2,20 @@
     <thead class="table-border">
       <tr>
         <th scope="col">Tier</th>
-        <th scope="col">Match</th>
         <th scope="col">Winners</th>
         <th scope="col">Amount</th>
       </tr>
     </thead>
-    <tbody class="table-border">
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+    <tbody class="table-border" *ngIf="data">
+      <tr *ngFor="let row of data; let i = index">
+        <td scope="row">{{i+1}}</td>
+        <td>{{ row.winners | number }}x</td>
+        <td>{{ (row.prize/100) | currency:'EUR' }}</td>
       </tr>
+    </tbody>
+    <tbody class="table-border" *ngIf="!data">
       <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
+        <td scope="row" colspan="3">Unable to load data... request has failed</td>
       </tr>
     </tbody>
 </table>

@@ -6,13 +6,8 @@ import { IRank } from '../data.interfaces';
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss']
 })
-export class ResultsComponent implements OnInit {
+export class ResultsComponent {
 
   @Input() public data: IRank[];
-  constructor() { }
-
-  ngOnInit() {
-    console.log(this.data);
-  }
 
 }

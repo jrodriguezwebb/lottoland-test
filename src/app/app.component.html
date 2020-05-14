@@ -7,7 +7,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <app-date [date]="model?.date"></app-date>
+      <app-date *ngIf="model?.date" [date]="model?.date"></app-date>
     </div>
   </div>
   <div class="row">

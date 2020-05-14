@@ -17,9 +17,6 @@ export class AppComponent implements OnInit {
   }
 
   callDataService() {
-    this.dataservice.getData().subscribe(data => {
-      console.log(data);
-      this.model = data;
-    });
+    this.dataservice.getData().subscribe(data => this.model = data);
   }
 }

@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DateComponent } from './date/date.component';
 import { DotComponent } from './dot/dot.component';
@@ -17,7 +15,6 @@ import { ResultsComponent } from './results/results.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
   ],
   providers: [],
